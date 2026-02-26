@@ -487,39 +487,40 @@
       overflow-y: auto;
     }
     .bill-print-overlay.active { display: flex; }
+    /* Half-A4 = A5 landscape: 210mm x 148mm */
     .bill-paper {
       background: white;
-      width: 740px;
-      min-width: 740px;
+      width: 794px;
+      min-width: 794px;
       box-shadow: 0 8px 32px rgba(0,0,0,0.3);
       font-family: Arial, sans-serif;
-      font-size: 12px;
+      font-size: 10px;
       color: #000;
       border: 1px solid #999;
     }
     .bill-header { display: flex; border-bottom: 2px solid #000; }
-    .bill-header-left { flex: 1; padding: 12px 14px; border-right: 1px solid #999; }
-    .bill-header-left .shop-name { font-size: 17px; font-weight: 700; }
-    .bill-header-left .shop-addr { font-size: 11px; margin-top: 2px; line-height: 1.5; }
-    .bill-header-right { padding: 12px 14px; min-width: 210px; font-size: 11px; line-height: 1.8; }
-    .bill-gst-title { font-weight: 700; font-size: 13px; margin-bottom: 2px; }
-    .bill-gst-row { text-align: center; padding: 5px; font-size: 11px; border-bottom: 1px solid #999; font-weight: 600; }
-    .bill-items-table { width: 100%; border-collapse: collapse; font-size: 11px; }
-    .bill-items-table th { border: 1px solid #999; padding: 5px; text-align: center; font-weight: 700; background: #f5f5f5; }
-    .bill-items-table td { border-left: 1px solid #999; border-right: 1px solid #999; border-bottom: 1px dashed #ccc; padding: 5px; text-align: center; }
-    .bill-items-table td.desc-cell { text-align: left; padding-left: 8px; }
-    .bill-items-table .empty-row td { height: 22px; border-bottom: 1px dashed #ddd; }
+    .bill-header-left { flex: 1; padding: 6px 10px; border-right: 1px solid #999; }
+    .bill-header-left .shop-name { font-size: 13px; font-weight: 700; }
+    .bill-header-left .shop-addr { font-size: 9px; margin-top: 1px; line-height: 1.4; }
+    .bill-header-right { padding: 6px 10px; min-width: 175px; font-size: 9px; line-height: 1.6; }
+    .bill-gst-title { font-weight: 700; font-size: 11px; margin-bottom: 1px; }
+    .bill-gst-row { text-align: center; padding: 3px; font-size: 9px; border-bottom: 1px solid #999; font-weight: 600; }
+    .bill-items-table { width: 100%; border-collapse: collapse; font-size: 9px; }
+    .bill-items-table th { border: 1px solid #999; padding: 3px 4px; text-align: center; font-weight: 700; background: #f5f5f5; }
+    .bill-items-table td { border-left: 1px solid #999; border-right: 1px solid #999; border-bottom: 1px dashed #ccc; padding: 3px 4px; text-align: center; }
+    .bill-items-table td.desc-cell { text-align: left; padding-left: 6px; }
+    .bill-items-table .empty-row td { height: 13px; border-bottom: 1px dashed #ddd; }
     .bill-totals-section { display: flex; border-top: 1px solid #999; }
-    .bill-words { flex: 1; padding: 8px 14px; border-right: 1px solid #999; font-size: 11px; font-style: italic; display: flex; align-items: center; }
-    .bill-amounts { min-width: 260px; font-size: 11px; }
-    .bill-amount-row { display: flex; justify-content: space-between; padding: 4px 14px; border-bottom: 1px solid #e8e8e8; }
-    .bill-amount-row.total-final { font-weight: 700; font-size: 13px; border-top: 1px solid #999; border-bottom: none; padding: 6px 14px; background: #f5f5f5; }
-    .bill-footer { display: flex; border-top: 2px solid #000; font-size: 10px; }
-    .bill-footer-left { flex: 1; padding: 8px 14px; border-right: 1px solid #999; line-height: 1.6; color: #555; }
-    .bill-footer-right { padding: 8px 14px; min-width: 210px; text-align: center; }
-    .bill-footer-right .signature-line { margin-top: 28px; border-top: 1px solid #000; font-size: 11px; padding-top: 4px; font-weight: 600; }
-    .bill-actions { display: flex; gap: 10px; padding: 14px 20px; background: #f5f5f5; border-top: 1px solid #ddd; justify-content: flex-end; }
-    .bill-customer-row { display: flex; padding: 6px 14px; font-size: 11px; border-bottom: 1px solid #e8e8e8; gap: 20px; }
+    .bill-words { flex: 1; padding: 4px 10px; border-right: 1px solid #999; font-size: 9px; font-style: italic; display: flex; align-items: center; }
+    .bill-amounts { min-width: 200px; font-size: 9px; }
+    .bill-amount-row { display: flex; justify-content: space-between; padding: 2px 10px; border-bottom: 1px solid #e8e8e8; }
+    .bill-amount-row.total-final { font-weight: 700; font-size: 11px; border-top: 1px solid #999; border-bottom: none; padding: 4px 10px; background: #f5f5f5; }
+    .bill-footer { display: flex; border-top: 2px solid #000; font-size: 8px; }
+    .bill-footer-left { flex: 1; padding: 4px 10px; border-right: 1px solid #999; line-height: 1.5; color: #555; }
+    .bill-footer-right { padding: 4px 10px; min-width: 175px; text-align: center; }
+    .bill-footer-right .signature-line { margin-top: 16px; border-top: 1px solid #000; font-size: 9px; padding-top: 3px; font-weight: 600; }
+    .bill-actions { display: flex; gap: 10px; padding: 10px 16px; background: #f5f5f5; border-top: 1px solid #ddd; justify-content: flex-end; }
+    .bill-customer-row { display: flex; padding: 3px 10px; font-size: 9px; border-bottom: 1px solid #e8e8e8; gap: 14px; }
 
     /* notification toast */
     .toast {
@@ -546,9 +547,10 @@
     .toast.error   { background: #991b1b; }
 
     @media print {
+      @page { size: A5 landscape; margin: 0; }
       body > * { display: none !important; }
       .bill-print-overlay { display: block !important; position: static !important; background: none !important; padding: 0 !important; }
-      .bill-paper { box-shadow: none !important; width: 100% !important; min-width: auto !important; }
+      .bill-paper { box-shadow: none !important; width: 210mm !important; min-width: unset !important; font-size: 10px !important; }
       .bill-actions { display: none !important; }
     }
   </style>
@@ -732,49 +734,6 @@
           </div>
         </div>
 
-        <!-- E-Way Bill -->
-        <div class="eway-section" id="ewaySection" style="display:none;">
-          <div class="eway-title">🚛 E-Way Bill Required (Total &gt; ₹50,000)</div>
-          <div class="form-row col-2">
-            <div class="form-group">
-              <label>TRANSPORTER NAME</label>
-              <input type="text" id="ewayTransporter" placeholder="Transport company name">
-            </div>
-            <div class="form-group">
-              <label>TRANSPORTER GSTIN</label>
-              <input type="text" id="ewayGstin" placeholder="32AAAAA0000A1Z5">
-            </div>
-          </div>
-          <div class="form-row col-2">
-            <div class="form-group">
-              <label>VEHICLE NUMBER</label>
-              <input type="text" id="ewayVehicle" placeholder="KL07AB1234">
-            </div>
-            <div class="form-group">
-              <label>DISTANCE (KM)</label>
-              <input type="number" id="ewayDistance" placeholder="45">
-            </div>
-          </div>
-          <div class="form-row col-2">
-            <div class="form-group">
-              <label>SUPPLY TYPE</label>
-              <select id="ewaySupplyType">
-                <option>Outward</option>
-                <option>Inward</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label>TRANSPORT MODE</label>
-              <select id="ewayMode">
-                <option>Road</option>
-                <option>Rail</option>
-                <option>Air</option>
-                <option>Ship</option>
-              </select>
-            </div>
-          </div>
-        </div>
-
         <button class="btn btn-green" onclick="saveInvoice()">✔ Save Invoice</button>
       </div>
     </div>
@@ -889,7 +848,10 @@
           <div class="form-group"><label>MOBILE</label><input type="text" id="settMobile" placeholder="Mobile number"></div>
         </div>
         <div class="form-group"><label>GST NUMBER</label><input type="text" id="settGst" placeholder="GSTIN"></div>
-        <div class="form-group"><label>STATE</label><input type="text" id="settState" placeholder="Kerala"></div>
+        <div class="form-row col-2">
+          <div class="form-group"><label>STATE</label><input type="text" id="settState" placeholder="Kerala"></div>
+          <div class="form-group"><label>STATE CODE</label><input type="text" id="settStateCode" placeholder="32"></div>
+        </div>
         <button class="btn btn-blue" onclick="saveSettings()" style="margin-top:6px;">Save Settings</button>
       </div>
     </div>
@@ -937,7 +899,7 @@
         <div class="form-group">
           <label>CATEGORY</label>
           <select id="pCategory">
-            <option>Fertilizer</option><option>Biofertilizer</option><option>Pesticide</option><option>Herbicide</option>
+            <option>Fertilizer</option><option>Pesticide</option><option>Herbicide</option>
             <option>Fungicide</option><option>Micronutrient</option><option>Seeds</option><option>Other</option>
           </select>
         </div>
@@ -1031,7 +993,7 @@
           <div><strong>Date : <span id="bpDate"></span></strong></div>
         </div>
       </div>
-      <div class="bill-gst-row">GST FERTILIZERS &nbsp;|&nbsp; GST : <span id="bpGstNo"></span></div>
+      <div class="bill-gst-row">GST FERTILIZERS &nbsp;|&nbsp; GST : <span id="bpGstNo"></span> &nbsp;|&nbsp; State : <span id="bpState"></span> &nbsp;|&nbsp; State Code : <span id="bpStateCode"></span></div>
       <div class="bill-customer-row">
         <span><strong>Customer :</strong> <span id="bpCustomer"></span></span>
         <span><strong>Phone :</strong> <span id="bpCustPhone"></span></span>
@@ -1078,6 +1040,7 @@
     </div>
     <div class="bill-actions">
       <button class="btn btn-ghost" onclick="window.print()">🖨️ Print</button>
+      <button class="btn btn-outline-blue" onclick="downloadCurrentBillPDF()">📥 Download PDF</button>
       <button class="btn btn-blue" onclick="closeBillPrint()">✕ Close</button>
     </div>
   </div>
@@ -1382,17 +1345,19 @@ function addToCartFromSearch(id) {
   if (existing) {
     if (existing.qty >= p.quantity) { toast('Insufficient stock','error'); return; }
     existing.qty++;
-    existing.netAmt  = existing.rate * existing.qty;
-    existing.cgstAmt = existing.netAmt * (existing.cgstPct/100);
-    existing.sgstAmt = existing.netAmt * (existing.sgstPct/100);
-    existing.total   = existing.netAmt + existing.cgstAmt + existing.sgstAmt;
+    existing.total   = existing.rate * existing.qty;
+    existing.netAmt  = existing.total / (1 + existing.gstPct / 100);
+    existing.cgstAmt = (existing.total - existing.netAmt) / 2;
+    existing.sgstAmt = (existing.total - existing.netAmt) / 2;
   } else {
-    const cgstPct = p.gst_percent/2, sgstPct = p.gst_percent/2;
-    const netAmt  = +p.selling_price;
-    const cgstAmt = netAmt*(cgstPct/100), sgstAmt = netAmt*(sgstPct/100);
+    const cgstPct = p.gst_percent / 2, sgstPct = p.gst_percent / 2;
+    const rate    = +p.selling_price;
+    const netAmt  = rate / (1 + p.gst_percent / 100);
+    const cgstAmt = (rate - netAmt) / 2;
+    const sgstAmt = (rate - netAmt) / 2;
     cartItems.push({ id:p.id, qty:1, name:p.name, hsn:p.hsn_code||'', unit:p.unit||'',
-      rate:+p.selling_price, gstPct:p.gst_percent, cgstPct, sgstPct,
-      cgstAmt, sgstAmt, netAmt, total:netAmt+cgstAmt+sgstAmt,
+      rate, gstPct:p.gst_percent, cgstPct, sgstPct,
+      cgstAmt, sgstAmt, netAmt, total:rate,
       maxQty: p.quantity });
   }
   renderCart();
@@ -1404,10 +1369,10 @@ function changeQty(i, delta) {
   if (newQty < 1) { removeFromCart(i); return; }
   if (newQty > item.maxQty) { toast('Insufficient stock','error'); return; }
   item.qty     = newQty;
-  item.netAmt  = item.rate * item.qty;
-  item.cgstAmt = item.netAmt*(item.cgstPct/100);
-  item.sgstAmt = item.netAmt*(item.sgstPct/100);
-  item.total   = item.netAmt + item.cgstAmt + item.sgstAmt;
+  item.total   = item.rate * item.qty;
+  item.netAmt  = item.total / (1 + item.gstPct / 100);
+  item.cgstAmt = (item.total - item.netAmt) / 2;
+  item.sgstAmt = (item.total - item.netAmt) / 2;
   renderCart();
 }
 
@@ -1449,24 +1414,23 @@ function renderCart() {
 }
 
 function recalcSummary() {
-  let taxable=0, cgst=0, sgst=0;
-  cartItems.forEach(i=>{ taxable+=i.netAmt; cgst+=i.cgstAmt; sgst+=i.sgstAmt; });
-  const discVal  = parseFloat(v('discountVal'))||0;
+  let grandBefore=0, taxable=0, cgst=0, sgst=0;
+  cartItems.forEach(i => {
+    grandBefore += i.total; taxable += i.netAmt; cgst += i.cgstAmt; sgst += i.sgstAmt;
+  });
+  const discVal  = parseFloat(v('discountVal')) || 0;
   const discType = v('discountType');
-  const discAmt  = discType==='pct' ? taxable*(discVal/100) : discVal;
-  const afterDisc = Math.max(0, taxable - discAmt);
-  const gstOnDisc = afterDisc > 0 ? (cgst+sgst) * (afterDisc/taxable||1) : 0;
-  const grandRaw  = afterDisc + cgst + sgst - (taxable>0?(cgst+sgst)-(gstOnDisc):0);
-  const grand     = Math.round(grandRaw);
-  const roundOff  = grand - grandRaw;
-  set('summTaxable', `₹${taxable.toFixed(2)}`);
-  set('summCgst',    `₹${cgst.toFixed(2)}`);
-  set('summSgst',    `₹${sgst.toFixed(2)}`);
-  set('summTotalGst',`₹${(cgst+sgst).toFixed(2)}`);
-  set('summRoundOff',`₹${roundOff.toFixed(2)}`);
+  const discAmt  = discType === 'pct' ? grandBefore * (discVal / 100) : discVal;
+  const grandRaw = Math.max(0, grandBefore - discAmt);
+  const grand    = Math.round(grandRaw);
+  const roundOff = grand - grandRaw;
+  const ratio    = grandBefore > 0 ? grandRaw / grandBefore : 1;
+  set('summTaxable',   `₹${(taxable*ratio).toFixed(2)}`);
+  set('summCgst',      `₹${(cgst*ratio).toFixed(2)}`);
+  set('summSgst',      `₹${(sgst*ratio).toFixed(2)}`);
+  set('summTotalGst',  `₹${((cgst+sgst)*ratio).toFixed(2)}`);
+  set('summRoundOff',  `₹${roundOff.toFixed(2)}`);
   set('summGrandTotal',`₹${grand.toFixed(2)}`);
-  // E-way bill threshold
-  document.getElementById('ewaySection').style.display = grand > 50000 ? 'block' : 'none';
 }
 
 function saveInvoice() {
@@ -1492,15 +1456,11 @@ function saveInvoice() {
       const balance  = payMode === 'Credit' ? grand : 0;
 
       db.run(`INSERT INTO invoices
-        (invoice_no,date,customer_name,customer_phone,customer_village,customer_gstin,customer_state,
-         place_of_supply,reference_no,subtotal,discount_amount,cgst_total,sgst_total,grand_total,
-         payment_mode,balance,notes,eway_required,eway_transporter,eway_gstin,eway_vehicle,eway_distance,eway_supply_type,eway_mode)
-        VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)`,
-        [invoiceNo, today, custName, v('custPhone'), v('custVillage'), v('custGstin'), v('custState'),
-         v('custPlace'), v('custRef'), taxable, discAmt, cgstTotal, sgstTotal, grand,
-         payMode, balance, v('billNotes'),
-         grand>50000?1:0, v('ewayTransporter'), v('ewayGstin'), v('ewayVehicle'),
-         v('ewayDistance'), v('ewaySupplyType'), v('ewayMode')],
+        (invoice_no,date,customer_name,customer_phone,customer_village,customer_gstin,
+         subtotal,discount_amount,cgst_total,sgst_total,grand_total,payment_mode,balance,notes)
+        VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?)`,
+        [invoiceNo, today, custName, v('custPhone'), v('custVillage'), v('custGstin'),
+         taxable, discAmt, cgstTotal, sgstTotal, grand, payMode, balance, v('billNotes')],
         function(err) {
           if (err) { toast('Error: '+err.message,'error'); return; }
           const invId = this.lastID;
@@ -1519,8 +1479,7 @@ function saveInvoice() {
           }, grand, discAmt, cgstTotal, sgstTotal);
           // reset
           cartItems=[];
-          ['custName','custPhone','custVillage','custGstin','custState','custRef','custPlace','billNotes',
-           'ewayTransporter','ewayGstin','ewayVehicle','ewayDistance'].forEach(id=>document.getElementById(id).value='');
+          ['custName','custPhone','custVillage','custGstin','billNotes'].forEach(id=>document.getElementById(id).value='');
           document.getElementById('discountVal').value='0';
           renderCart();
           loadAllProducts();
@@ -1541,7 +1500,9 @@ function showBillPrint(invoiceNo, dateStr, items, cust, grand, discAmt, cgstTota
     document.getElementById('bpShopAddr').innerHTML = cfg.address;
     set('bpPhone', cfg.phone);
     set('bpMobile', cfg.mobile);
-    set('bpGstNo', cfg.gst);
+    set('bpGstNo',     cfg.gst);
+    set('bpState',     cfg.state||'');
+    set('bpStateCode', cfg.stateCode||'');
     set('bpForShop', cfg.name);
     set('bpInvoiceNo', invoiceNo);
     set('bpDate', df);
@@ -1572,6 +1533,28 @@ function showBillPrint(invoiceNo, dateStr, items, cust, grand, discAmt, cgstTota
 
 function closeBillPrint() {
   document.getElementById('billPrintOverlay').classList.remove('active');
+}
+
+async function downloadCurrentBillPDF() {
+  const confirmed = confirm('Do you want to save this invoice as a PDF?');
+  if (!confirmed) return;
+  try {
+    const result = await ipcRenderer.invoke('save-pdf');
+    if (result.success) toast('PDF saved: ' + result.filePath, 'success');
+    else if (!result.cancelled) toast('PDF save failed', 'error');
+  } catch(e) { toast('PDF error: ' + e.message, 'error'); }
+}
+
+function downloadInvoicePDF(invId) {
+  showBillPrintFromInvoice(invId);
+  setTimeout(() => {
+    const confirmed = confirm('Do you want to save this invoice as a PDF?');
+    if (!confirmed) return;
+    ipcRenderer.invoke('save-pdf').then(result => {
+      if (result.success) toast('PDF saved: ' + result.filePath, 'success');
+      else if (!result.cancelled) toast('PDF save failed', 'error');
+    }).catch(e => toast('PDF error: ' + e.message, 'error'));
+  }, 400);
 }
 
 function showBillPrintFromInvoice(invId) {
@@ -1636,6 +1619,7 @@ function renderInvoiceTable() {
           <td>${ewbBadge}</td>
           <td style="display:flex;gap:6px;">
             <button class="btn btn-icon btn-ghost" onclick="showBillPrintFromInvoice(${r.id})">👁 View</button>
+            <button class="btn btn-icon btn-outline-blue" onclick="downloadInvoicePDF(${r.id})">📥</button>
             <button class="btn btn-icon btn-red" onclick="deleteInvoice(${r.id})">🗑</button>
           </td>
         </tr>`;
@@ -1785,7 +1769,7 @@ function loadReports() {
 ══════════════════════════════════ */
 function loadSettingsConfig(cb) {
   db.all(`SELECT key,value FROM settings`,(err,rows)=>{
-    const cfg = { name:'Your Shop Name', address:'Address', phone:'', mobile:'', gst:'', state:'' };
+    const cfg = { name:'Your Shop Name', address:'Address', phone:'', mobile:'', gst:'', state:'', stateCode:'' };
     (rows||[]).forEach(r=>cfg[r.key]=r.value);
     shopConfig = cfg;
     if (cb) cb(cfg);
@@ -1798,8 +1782,9 @@ function loadSettings() {
     document.getElementById('settAddress').value  = (cfg.address||'').replace(/<br>/g,'\n');
     document.getElementById('settPhone').value    = cfg.phone||'';
     document.getElementById('settMobile').value   = cfg.mobile||'';
-    document.getElementById('settGst').value      = cfg.gst||'';
-    document.getElementById('settState').value    = cfg.state||'';
+    document.getElementById('settGst').value       = cfg.gst||'';
+    document.getElementById('settState').value     = cfg.state||'';
+    document.getElementById('settStateCode').value = cfg.stateCode||'';
   });
 }
 
@@ -1809,8 +1794,9 @@ function saveSettings() {
     ['address',(v('settAddress')||'').replace(/\n/g,'<br>')],
     ['phone',  v('settPhone')],
     ['mobile', v('settMobile')],
-    ['gst',    v('settGst')],
-    ['state',  v('settState')],
+    ['gst',       v('settGst')],
+    ['state',     v('settState')],
+    ['stateCode', v('settStateCode')],
   ];
   pairs.forEach(([k,val])=>{
     db.run(`INSERT INTO settings(key,value) VALUES(?,?) ON CONFLICT(key) DO UPDATE SET value=?`,[k,val,val]);
