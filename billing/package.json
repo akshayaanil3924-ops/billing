@@ -9,28 +9,32 @@
     "dist": "electron-builder --win"
   },
   "devDependencies": {
+    "@electron/rebuild": "^3.7.2",
     "electron": "^25.9.8",
     "electron-builder": "^24.13.3"
   },
   "build": {
     "appId": "com.yourname.fertilizerbilling",
     "productName": "Fertilizer Billing",
+    "asar": false,
     "win": {
       "target": "nsis"
     },
     "nsis": {
       "oneClick": false,
-      "allowToChangeInstallationDirectory": true
+      "allowToChangeInstallationDirectory": true,
+      "perMachine": true
     },
+    "files": [
+      "**/*",
+      "!dist/**",
+      "!node_modules/.cache/**"
+    ],
     "extraResources": [
       {
         "from": "database.sqlite",
         "to": "database.sqlite"
       }
-    ],
-    "files": [
-      "**/*",
-      "!dist/**"
     ]
   },
   "dependencies": {
