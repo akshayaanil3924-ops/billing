@@ -153,6 +153,35 @@ app.whenReady().then(() => {
     return { success: true };
   });
   
+  ipcMain.handle('delete-invoice', (_, invoiceId) => {
+    return new Promise((resolve) => {
+      db.serialize(() => {
+        // Step 1: Fetch all items so we can restore stock
+        db.all(`SELECT product_id, quantity FROM invoice_items WHERE invoice_id = ?`, [invoiceId], (err, items) => {
+          if (err) { resolve({ success: false, reason: err.message }); return; }
+
+          db.run(`DROP TRIGGER IF EXISTS prevent_invoice_delete`);
+
+          // Step 2: Restore stock for each product
+          (items || []).forEach(item => {
+            db.run(`UPDATE products SET quantity = quantity + ? WHERE id = ?`, [item.quantity, item.product_id]);
+          });
+
+          // Step 3: Delete invoice items and invoice
+          db.run(`DELETE FROM invoice_items WHERE invoice_id = ?`, [invoiceId]);
+          db.run(`DELETE FROM invoices WHERE id = ?`, [invoiceId], (err2) => {
+            // Step 4: Re-create the protection trigger
+            db.run(`CREATE TRIGGER IF NOT EXISTS prevent_invoice_delete
+              BEFORE DELETE ON invoices BEGIN
+              SELECT RAISE(ABORT,'Invoices cannot be deleted'); END;`);
+            if (err2) resolve({ success: false, reason: err2.message });
+            else resolve({ success: true });
+          });
+        });
+      });
+    });
+  });
+
   ipcMain.handle('save-pdf', async () => {
     try {
       const result = await dialog.showSaveDialog(mainWindow, {
