@@ -67,10 +67,8 @@ The project is configured as an Electron application and uses SQLite3 as its dat
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com//fertilizer-billing.git
+git clone https://github.com/akshayaanil3924-ops/billing.git
 ```
-
-Replace `USERNAME` with your GitHub username.
 
 ### 2. Navigate to the Project Directory
 
@@ -104,8 +102,6 @@ fertilizer-billing/
 ├── database.sqlite
 └── README.md
 ```
-
-Additional files may be present depending on the current development version.
 
 ## Application Modules
 
@@ -156,38 +152,6 @@ INV-2026-003
 
 The system saves invoice information and associated invoice items in the database.
 
-## Future Enhancements
-
-The following features can be considered for future versions:
-
-* Customer management
-* PDF invoice generation
-* Thermal printer support
-* Barcode scanning
-* Low-stock notifications
-* Advanced sales analytics
-* Customer purchase history
-* User authentication
-* Automated database backups
-* Windows installer generation
-
-## Limitations
-
-* The current application uses a local SQLite database.
-* It is primarily designed for single-system usage.
-* Advanced user authentication is not currently included.
-* Online synchronization is not currently supported.
-
 ## Purpose
 
 This project is intended to provide a simple and efficient computerized solution for fertilizer shop billing and inventory management while reducing manual record keeping.
-
-## Author
-
-**Akshaya Anil**
-
-B.Tech Computer Science and Engineering
-
-## License
-
-This project is developed for educational and academic purposes.
