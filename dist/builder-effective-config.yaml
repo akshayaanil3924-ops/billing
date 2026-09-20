@@ -1,0 +1,18 @@
+directories:
+  output: dist
+  buildResources: build
+appId: com.idukkigreenagro.billing
+productName: IGA Fertilizer Billing
+files:
+  - filter:
+      - '**/*'
+      - '!database.sqlite*'
+      - '!backup*.sqlite'
+      - '!backups/**'
+win:
+  target: nsis
+nsis:
+  oneClick: false
+  allowToChangeInstallationDirectory: true
+  createDesktopShortcut: true
+electronVersion: 28.3.3
