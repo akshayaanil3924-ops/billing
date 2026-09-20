@@ -7,3 +7,6 @@ billing/dist/
 billing/node_modules/
 
 node_modules/
+node_modules/
+*.sqlite-shm
+*.sqlite-wal
